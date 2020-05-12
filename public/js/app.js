@@ -53,14 +53,12 @@ class ProductList extends React.Component { // we create a class component calle
         );
     }
 }
+
+
 class Product extends React.Component { // Create another class component. Must extend Component from the React library.
-  constructor(props) {
-    super(props);
 
-    this.handleUpVote = this.handleUpVote.bind(this);
-  }
-
-  handleUpVote() { // This is the function that handles the data when the the 'up vote' button has been clicked. 
+  // Refactored using Babel transform-class-properties (see script in head on index.html)
+  handleUpVote = () => { // This is the function that handles the data when the the 'up vote' button has been clicked. 
     // calls this.props.onVote (the method that is in Product) with the.props.id (the key value pair in Product) as a parameter. 
     this.props.onVote(this.props.id);
   }
