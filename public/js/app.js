@@ -1,19 +1,12 @@
 class ProductList extends React.Component { // we create a class component called ProductList. it extends the Component from the React library
-  constructor(props){
-    super(props);
-
-    this.state = {
-      products: [],
-    }
-
-    this.handleProductUpVote = this.handleProductUpVote.bind(this)
-
+  state = {
+    products: [],
   }
-
+  
   componentDidMount() {
     this.setState({ products: Seed.products });
   }
-    handleProductUpVote(productId) { // function that fires after a product has been upvoted. will handle updating the vote count.
+    handleProductUpVote = (productId) => { // function that fires after a product has been upvoted. will handle updating the vote count.
     const nextProducts = this.state.products.map((product) => {
       if (product.id === productId) {
         return Object.assign({}, product, {
