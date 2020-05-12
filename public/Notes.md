@@ -22,8 +22,8 @@
 
 #### Data flows from parent to children through props
     Natively, data flows top down. A parent can pass props to a child, however, a child cannot natively pass data to a parent.
+    
 #### Event flows from children to parent through functions
-#### Utlizied React lifecycle methods
-#### Stateful components and how state is different from props
-#### How to manipulate state while treating it as immutable
+    We can pass props from child to parent by using a function to handle it.
+
 
